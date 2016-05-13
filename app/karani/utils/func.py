@@ -1,6 +1,5 @@
 import os
 import glob
-from ocwminer import config
 
 realpath = os.path.realpath
 
@@ -14,6 +13,9 @@ def pathexists(base, *paths):
 def joinpaths(base, *paths, real = True):
     path = __join(base, *paths)
     return realpath(path) if real else path
+
+def userpath(path):
+    return os.path.expanduser(path)
 
 def mkdir(path):
     if pathexists(path):

@@ -1,3 +1,4 @@
 from .cols import *
 from .distillers import *
-from . import files
+from .files import File, TextFile
+from .singleton import SingleTone
