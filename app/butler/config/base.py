@@ -1,5 +1,5 @@
-from karani.utils.types import stack, SingleTone, File
-from karani import utils
+from butler.utils.types import stack, SingleTone, File
+from butler import utils
 
 from .const import *
 
@@ -95,7 +95,7 @@ class Configuration(SingleTone):
 			if key in self.__dict__:
 				return self.__dict__[key]
 			elif self.__strict__:
-				raise AttributeError('[{0}] Configuration key "{1}" does not exist')
+				raise AttributeError('[{0}] Configuration key "{1}" does not exist'.format(self.__class__, key))
 			else:
 				return None
 		else:

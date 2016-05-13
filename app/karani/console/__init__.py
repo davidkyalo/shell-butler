@@ -1,2 +1,0 @@
-
-marani = "You found karani.."
