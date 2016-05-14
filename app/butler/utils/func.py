@@ -1,5 +1,6 @@
 import os
 import glob
+import importlib
 
 realpath = os.path.realpath
 
@@ -66,5 +67,15 @@ def copyfile(path, dest, name = None):
 
 def finddirs(self):
     pass
+
+def load_module(name, package = None):
+    return importlib.import_module(name, package)
+
+def import_obj(path):
+    parts = path.split('.')
+    obj_name = parts[-1]
+    module_name = '.'.join(parts[:-1])    
+    module = load_module(module_name)
+    return getattr(module, obj_name)
 
 from .types.files import File

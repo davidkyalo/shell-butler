@@ -4,7 +4,7 @@ from butler.utils.types import ImportLater
 
 
 chain_of_command = stack()
-unresolved = stack()
+handlers = stack()
 
 def create_node(handler):
 	node = stack()
