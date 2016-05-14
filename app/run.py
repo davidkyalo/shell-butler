@@ -1,7 +1,10 @@
-from os.path import expanduser
+from awc import aol
 
-$home = 2000
+print(type(aol.Mtumishi))
 
-config_path = expanduser("~/.butler/config.json")
-with open(config_path, 'r') as f:
-	print(f.read())
+toto = aol.Mtumishi()
+
+print(type(toto))
+
+print(toto.__class__.__module__)
+print(toto.__class__.__name__)
